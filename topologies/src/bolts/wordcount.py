@@ -40,7 +40,7 @@ class WordCounter(Bolt):
         # into the table
         if self.counts[uword] == 1:
             cur.execute("INSERT INTO Tweetwordcount (word, count) VALUES (uword, "1")");
-            conn.commit
+            conn.commit ()
 
         #Else update the table by incrementing the count by 1
         else:
